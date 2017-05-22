@@ -13,20 +13,11 @@ public class LRUCache {
     Node head = null;
     Node tail = null;
 
-    /**
-     *
-     * @param capacity
-     */
     public LRUCache(int capacity) {
         this.capacity = capacity;
     }
 
 
-    /**
-     *
-     * @param key
-     * @return
-     */
     public int get(int key) {
         if(map.containsKey(key)){
             Node n = map.get(key);
@@ -39,10 +30,6 @@ public class LRUCache {
     }
 
 
-    /**
-     *
-     * @param n
-     */
     public void remove(Node n){
         if(n.pre!=null){ //Not an head element
             n.pre.next = n.next;
@@ -59,10 +46,6 @@ public class LRUCache {
     }
 
 
-    /**
-     *
-     * @param n
-     */
     public void setHead(Node n){
         n.next = head;
         n.pre = null;
@@ -77,11 +60,6 @@ public class LRUCache {
     }
 
 
-    /**
-     *
-     * @param key
-     * @param value
-     */
     public void set(int key, int value) {
         if(map.containsKey(key)){
             Node old = map.get(key);
@@ -104,9 +82,6 @@ public class LRUCache {
     }
 
 
-    /**
-     *
-     */
     private void print(){
         Node node = head;
         while(node!=null){
@@ -117,10 +92,6 @@ public class LRUCache {
     }
 
 
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args) {
         LRUCache lru = new LRUCache(2);
         lru.set(2,1);
