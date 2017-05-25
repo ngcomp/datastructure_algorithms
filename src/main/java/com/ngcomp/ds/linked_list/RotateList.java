@@ -13,7 +13,7 @@ public class RotateList implements Base{
 //    }
 
 
-    public static void printList(ListNode head){
+    public static void printList(Node head){
         while(head!=null){
             System.out.println(head.val + " ");
             head = head.next;
@@ -21,14 +21,14 @@ public class RotateList implements Base{
     }
 
 
-    public static ListNode rotateRight(ListNode head, int k) {
+    public static Node rotateRight(Node head, int k) {
 
         if(head == null || k == 0){
             return head;
         }
 
-        ListNode slow = head;
-        ListNode fast = head;
+        Node slow = head;
+        Node fast = head;
 
         int len = 0;
 
@@ -49,7 +49,7 @@ public class RotateList implements Base{
         }
 
 
-        ListNode newHead = slow.next;
+        Node newHead = slow.next;
         slow.next = null;
         fast.next = head;
 
@@ -60,18 +60,18 @@ public class RotateList implements Base{
 
     public static void main(String[] args) {
 
-        ListNode item1 = new ListNode(1);
-        ListNode item2 =  new ListNode(2);
-        ListNode item3 =  new ListNode(3);
-        ListNode item4 =  new ListNode(4);
-        ListNode item5 =  new ListNode(5);
+        Node item1 = new Node(1);
+        Node item2 =  new Node(2);
+        Node item3 =  new Node(3);
+        Node item4 =  new Node(4);
+        Node item5 =  new Node(5);
 
         item1.next = item2;
         item2.next = item3;
         item3.next = item4;
         item4.next = item5;
 
-        ListNode head = rotateRight(item1, 3);
+        Node head = rotateRight(item1, 3);
         printList(head);
 
     }

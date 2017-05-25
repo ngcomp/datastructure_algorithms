@@ -8,23 +8,23 @@ public class RemoveNthLastElement implements Base {
   
   public static void main(String[] args) {
     
-    ListNode l1i1 = new ListNode(1);
-    ListNode l1i2 = new ListNode(2);
-    ListNode l1i3 = new ListNode(8);
-    ListNode l1i4 = new ListNode(10);
+    Node l1i1 = new Node(1);
+    Node l1i2 = new Node(2);
+    Node l1i3 = new Node(8);
+    Node l1i4 = new Node(10);
     
     l1i1.next = l1i2;
     l1i2.next = l1i3;
     l1i3.next = l1i4;
     
     printList(l1i1);
-    ListNode sum = removeNthFromEnd(l1i1, 3);
+    Node sum = removeNthFromEnd(l1i1, 3);
     printList(sum);
     
   }
   
   
-  public static void printList(ListNode head){
+  public static void printList(Node head){
     System.out.println("--------------------------------");
     while(head!=null){
       System.out.println(head.val + " ");
@@ -42,13 +42,13 @@ public class RemoveNthLastElement implements Base {
    * @param n
    * @return
    */
-  public static ListNode removeNthFromEnd(ListNode head, int n) {
+  public static Node removeNthFromEnd(Node head, int n) {
     
     if(head == null){
       return null;
     }
-    ListNode slow = head;
-    ListNode fast = head;
+    Node slow = head;
+    Node fast = head;
     
     int count = 0;
     

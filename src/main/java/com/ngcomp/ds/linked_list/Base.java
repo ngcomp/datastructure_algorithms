@@ -5,9 +5,10 @@ package com.ngcomp.ds.linked_list;
  */
 public interface Base {
   
-  class ListNode{
+  class Node {
     int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
+    Node next;
+    Node(int x) { val = x; }
   }
+  
 }
