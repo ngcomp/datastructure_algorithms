@@ -3,14 +3,14 @@ package com.ngcomp.ds.linked_list;
 /**
  * Created by Ram Parashar on 5/21/17.
  */
-public class RotateList {
+public class RotateList implements Base{
 
 
-    static class ListNode{
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
+//    static class ListNode{
+//        int val;
+//        ListNode next;
+//        ListNode(int x) { val = x; }
+//    }
 
 
     public static void printList(ListNode head){
