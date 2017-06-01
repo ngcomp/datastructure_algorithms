@@ -1,4 +1,4 @@
-package com.ngcomp;
+package com.ngcomp.algo;
 
 /**
  * Hamming distance is equal to the number of ones (population count) in a XOR.
