@@ -1,26 +1,15 @@
-package com.ngcomp.ds.linked_list;
+package com.ngcomp.ds.linked_list.algo;
 
 /**
+ * Solved using slow and fast pointer approach.
  * Created by Ram Parashar on 5/25/17.
  */
-public class RemoveNthLastElement implements Base {
+public class RemoveNthLastElement{
   
-  
-  public static void main(String[] args) {
-    
-    Node l1i1 = new Node(1);
-    Node l1i2 = new Node(2);
-    Node l1i3 = new Node(8);
-    Node l1i4 = new Node(10);
-    
-    l1i1.next = l1i2;
-    l1i2.next = l1i3;
-    l1i3.next = l1i4;
-    
-    printList(l1i1);
-    Node sum = removeNthFromEnd(l1i1, 3);
-    printList(sum);
-    
+  private static class Node{
+    int val;
+    public Node next;
+    Node(int x) { val = x; }
   }
   
   
@@ -70,6 +59,24 @@ public class RemoveNthLastElement implements Base {
     slow.next = slow.next.next;
     
     return head;
+  }
+  
+  
+  public static void main(String[] args) {
+    
+    Node l1i1 = new Node(1);
+    Node l1i2 = new Node(2);
+    Node l1i3 = new Node(8);
+    Node l1i4 = new Node(10);
+    
+    l1i1.next = l1i2;
+    l1i2.next = l1i3;
+    l1i3.next = l1i4;
+    
+    printList(l1i1);
+    Node sum = removeNthFromEnd(l1i1, 3);
+    printList(sum);
+    
   }
   
 }

@@ -1,16 +1,15 @@
-package com.ngcomp.ds.linked_list;
+package com.ngcomp.ds.linked_list.algo;
 
 /**
  * Created by Ram Parashar on 5/21/17.
  */
-public class RotateList implements Base{
-
-
-//    static class ListNode{
-//        int val;
-//        ListNode next;
-//        ListNode(int x) { val = x; }
-//    }
+public class RotateList{
+    
+    private static class Node{
+        int val;
+        public Node next;
+        Node(int x) { val = x; }
+    }
 
 
     public static void printList(Node head){
