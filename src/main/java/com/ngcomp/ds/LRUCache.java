@@ -1,4 +1,4 @@
-package com.ngcomp.algo;
+package com.ngcomp.ds;
 
 import java.util.HashMap;
 
