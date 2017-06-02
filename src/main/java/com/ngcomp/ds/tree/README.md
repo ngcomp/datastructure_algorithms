@@ -8,14 +8,15 @@
 
 **Path** Sequence of nodes such that two consecutive nodes in the sequence form an edge.
 
+
 #### Class Representation
 
-`
+```
 class Node {
   public int val; 
   public Node[] children;
 }
-`
+```
 
 #### Tree Types 
 
