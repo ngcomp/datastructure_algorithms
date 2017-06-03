@@ -1,17 +1,22 @@
 ## Trees
 
-* Each tree has a root. 
+* Each tree has a root that has no parent. 
 * Each root node has one or more child. 
 * Each child node has one or more child nodes, and so on.
 
+**Edge** pair of nodes (u,v) such that u is the parent of v, or vice versa. 
+
+**Path** Sequence of nodes such that two consecutive nodes in the sequence form an edge.
+
+
 #### Class Representation
 
-`
+```
 class Node {
   public int val; 
   public Node[] children;
 }
-`
+```
 
 #### Tree Types 
 
