@@ -1,8 +1,8 @@
 ## Trees
 
 * Each tree has a root that has no parent. 
-* Each root node has one or more child. 
-* Each child node has one or more child nodes, and so on.
+* Each root treeNode has one or more child. 
+* Each child treeNode has one or more child nodes, and so on.
 
 **Edge** pair of nodes (u,v) such that u is the parent of v, or vice versa. 
 
@@ -20,7 +20,7 @@ class Node {
 
 #### Tree Types 
 
-**Binary Tree** = Each node has upto two childrens.
+**Binary Tree** = Each treeNode has upto two childrens.
 
 **Binary Search Tree** = Binary tree with all left decendents <= n < right descendents.
 
@@ -28,7 +28,7 @@ class Node {
 
 **Complete Binary Trees** = Every level of tree is fully filled, except for perhaps for the last level. Last level is always filled from left to right. 
 
-**Fully Binary Tree** = Binary tree where each node has zero or two child nodes. 
+**Fully Binary Tree** = Binary tree where each treeNode has zero or two child nodes. 
 
 **Perfect Binary Tree** = Tree which is both full and complete. All leaf nodes will be at the same level.
 
@@ -37,11 +37,11 @@ class Node {
 ** Preorder **
 
 ```
-public void preOrderTraversal(Node node){
-  if(node != null){
-    System.out.println(node.val);
-    preOrderTraversal(node.left);
-    preOrderTraversal(node.right);
+public void preOrderTraversal(Node treeNode){
+  if(treeNode != null){
+    System.out.println(treeNode.val);
+    preOrderTraversal(treeNode.left);
+    preOrderTraversal(treeNode.right);
   }
 }
 ```
@@ -49,11 +49,11 @@ public void preOrderTraversal(Node node){
 ** Inorder **
 
 ```
-public void preOrderTraversal(Node node){
-  if(node != null){
-    preOrderTraversal(node.left);
-    System.out.println(node.val);
-    preOrderTraversal(node.right);
+public void preOrderTraversal(Node treeNode){
+  if(treeNode != null){
+    preOrderTraversal(treeNode.left);
+    System.out.println(treeNode.val);
+    preOrderTraversal(treeNode.right);
   }
 }
 ```
@@ -61,11 +61,16 @@ public void preOrderTraversal(Node node){
 ** Postorder **
 
 ```
-public void preOrderTraversal(Node node){
-  if(node != null){
-    preOrderTraversal(node.left);
-    preOrderTraversal(node.right);
-    System.out.println(node.val);    
+public void preOrderTraversal(Node treeNode){
+  if(treeNode != null){
+    preOrderTraversal(treeNode.left);
+    preOrderTraversal(treeNode.right);
+    System.out.println(treeNode.val);    
   }
 }
 ```
+
+#### Representation
+
+* Using Connected Nodes
+* Using Array ( 2n+1 = left, 2n+1 = right, (n - 1) / 2 = root)

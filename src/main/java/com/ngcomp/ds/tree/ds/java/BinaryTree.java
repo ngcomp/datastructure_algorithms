@@ -1,9 +1,9 @@
-package com.ngcomp.ds.tree.ds;
+package com.ngcomp.ds.tree.ds.java;
 
 /**
  * Created by Ram Parashar on 6/2/17.
  */
-public interface BinaryTree<E> extends Tree<E>{
+public interface BinaryTree<E> extends Tree<E> {
   
   Position<E> left(Position<E> p) throws IllegalArgumentException;
   

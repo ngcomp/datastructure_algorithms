@@ -1,4 +1,4 @@
-package com.ngcomp.ds.tree.ds;
+package com.ngcomp.ds.tree.ds.java;
 
 import java.util.ArrayList;
 import java.util.List;
