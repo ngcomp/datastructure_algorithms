@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class BST {
 
-  TreeNode root;
+  public TreeNode root;
 
   public TreeNode insert(TreeNode treeNode, Integer data) {
 
@@ -188,6 +188,10 @@ public class BST {
   }
 
 
+  /**
+   * https://leetcode.com/submissions/detail/60394631/
+   * @return
+   */
   public LinkedList<Integer> serializePreOrder() {
     LinkedList<Integer> serialized = new LinkedList();
     this.serializePreOrder(root, serialized);
